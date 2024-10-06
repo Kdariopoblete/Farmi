@@ -5,134 +5,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- favicon -->
-    <link rel="shortcut icon" href="./multimedia/logo/logo1.png" type="image/x-icon">
-    <!-- title -->
-    <title>SatFarm</title>
+    <link rel="shortcut icon" href="../multimedia/logo/logo.jpeg" type="image/x-icon">
+    <!-- titulo  -->
+    <title>Elite</title>
     <!-- estilos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!-- fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
     <!-- scripts -->
-    <script defer src="./js/main.js"></script>
+    <script defer src="../js/main.js"></script>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg ">
+    <header class="mb-5">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid d-flex justify-content-between align-items-center">
-                <!-- logo  -->
-                <a class="navbar-brand" href="index.html" style="margin-left:40%;">
-                    <img style="width: 50%;" src="./multimedia/logo/logo.png" alt="logo" id="logo" class="rounded img-fluid">
+                <!-- Logo a la izquierda utilizando las clases de Bootstrap -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="../multimedia/logo/logo.jpeg" alt="logo" id="logo" class="rounded img-fluid">
                 </a>
 
-                <!-- menu hamburguesa -->
+                <!-- Botón de hamburguesa -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- enlaces -->
-                
+                <!-- Enlaces a la derecha -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link navbar-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbar-link" href="./somos.html">Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbar-link" href="./galeria.html">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link active navbar-link" href="./presupuesto.html">Presupuesto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbar-link" href="./contacto.html">Trabaja con nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <!-- principal -->
-    <main class="mb-6">
-        <!-- carrusel -->
-        <div id="carouselExampleIndicators mb-6" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-                
-
-            </div>
-            <div class="carousel-inner mb-6">
-                <div class="carousel-item img-carru active">
-                    <img src="./multimedia/carrusel/1.jpeg" class="d-block w-100" alt="Slide 1">
-                </div>
-                <div class="carousel-item img-carru">
-                    <img src="./multimedia/carrusel/2.jpeg" class="d-block w-100" alt="Slide 2">
-                </div>
-                <div class="carousel-item img-carru">
-                    <img src="./multimedia/carrusel/3.jpeg" class="d-block w-100" alt="Slide 3">
-                </div>
-
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Back</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+    <main class="container mb-3  ">
+        <div class="col-md-12 text-center" id="sociales">
+            <h2 class="title-galeria">Presupuesto</h2>
         </div>
-        <div class="container">
-            <div class="row justify-content-center align-items-center" style="height: 25vh;">
-                <div class="col-6 text-center">
-                    <h2>¡Cultivating solutions!</h2>
-                    <p>"We will present you your new best friend called "Farmi", our trained AI with information provided by "NASA" and the proved solutions to assist you in your agricultural adventures "</p>
-
-                </div>
+        <form>
+            <!-- tipo  -->
+            <div class="mb-3">
+                <label for="tipoEvento" class="form-label">Tipo de evento:</label>
+                <select class="form-select" id="tipoEvento" required>
+                    <option value="">Seleccionar</option>
+                    <option value="casamiento">Casamiento</option>
+                    <option value="cumpleanos">Cumpleaños</option>
+                    <option value="otro">Otro</option>
+                </select>
             </div>
-        </div>
 
-        <!-- cards -->
-        <div class="container tarjetas contenedor mt-5 align-items-center">
-            <div class="row">
-                <div class="col-md-2 mb-3"></div>
-                <div class="col-md-8 mb-3">
-                    <a href="https://poe.com/Farmi">
-                        <div class="card text-bg-dark">
-                            <img src="./multimedia/img/index/galeria.jpg"
-                                class="card-img-top zoom-effect " alt="...">
-                            <div class="card-img-overlay">
-                                <h1 class="card-title" style="font-size:800%;">Talk<br>with<br>Farmi</h1>
-                            </div>
-                        </div>
-                    </a> 
-                </div><div class="col-md-2 mb-3"></div>
-                
-                <!--------------------GRAFICO CO2---------------------------->
-                <div class="col-md-2 mb-3"><h4 style="text-align: left;">Here you can see the increase of carbon dioxide from 1970 up to 2023.</h4></div>
-                
-                <div class="col-md-8 mb-3">
-                    <canvas id="linea" class="card-img-top"></canvas> <!-- CANVAS donde se ejecuta el grafico -->
-                  
-                </div><div class="col-md-2 mb-3"></div>
-                    <!--------------------GRAFICO CALOR---------------------------->
-                    <div class="col-md-2 mb-3 "></div>
-                    <div class="col-md-8 mb-3">
-                        <canvas id="chart" class="card-img-top"></canvas> <!-- CANVAS donde se ejecuta el grafico -->
-                       
-                    </div><div class="col-md-2 mb-3"><h4 style="text-align: left;">Here its impact, how the increase of temperature of the planet continues, independently of the solar irradiation in consequence of the increase of Co2</h4></div>
-                    
-            
-                
+            <!-- locacion -->
+            <div class="mb-3">
+                <label for="locacion" class="form-label">Locación:</label>
+                <select class="form-select" id="locacion" required>
+                    <option value="">Seleccionar</option>
+                    <option value="rawson">Rawson</option>
+                    <option value="capital">Capital</option>
+                    <option value="rivadavia">Rivadavia</option>
+                    <option value="pocito">Pocito</option>
+                </select>
             </div>
-        </div>
 
-        <!-- texto  -->
-        
+            <!--  invitados -->
+            <div class="mb-3">
+                <label for="cantidadInvitados" class="form-label">Cantidad de invitados:</label>
+                <input type="number" class="form-control" id="cantidadInvitados" required>
+            </div>
+
+            <!-- duracion  -->
+            <div class="mb-3">
+                <label for="duracionEvento" class="form-label">Duración del evento (Horas):</label>
+                <input type="number" class="form-control" id="duracionEvento" required>
+            </div>
+
+            <!--  voucher -->
+            <div class="mb-3">
+                <label for="voucher" class="form-label">Ingresar voucher:</label>
+                <input type="text" class="form-control" id="voucher">
+            </div>
+
+            <!-- mensaje -->
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje adicional:</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4"></textarea>
+            </div>
+
+            <!--  enviar -->
+            <button type="submit" class="btn btn-enviar mb-3">Enviar</button>
+        </form>
     </main>
 
-    <!-- video -->
-    <div class="embed-responsive embed-responsive-16by9 d-flex justify-content-center align-items-center mb-3">
-        <video class="embed-responsive-item img-fluid" controls>
-            <source src="./multimedia/videos/presentacion.mp4" type="video/mp4">
-            Tu navegador no soporta el tag de video.
-        </video>
-    </div>
     <!-- footer -->
     <footer>
         <div class="container">
@@ -146,41 +130,41 @@
                     </div>
                     <ul>
                         <li>
-                            <a href="https://api.whatsapp.com/send?phone=542646731689" target="_blank">
-                                <img src="./multimedia/ico/call.png" class="redes" alt="Teléfono"> Teléfono: +54 -
-                                2646731689
+                            <a href="https://api.whatsapp.com/send?phone=542644853601" target="_blank">
+                                <img src="../multimedia/ico/call.png" class="redes" alt="Teléfono"> Teléfono: +54 -
+                                2644853601
                             </a>
                         </li>
                         <li>
                             <a href="mailto:elitecatering@gmail.com" target="_blank">
-                                <img src="./multimedia/ico/email.png" class="redes" alt="Email"> Email:
+                                <img src="../multimedia/ico/email.png" class="redes" alt="Email"> Email:
                                 elitecatering@gmail.com
                             </a>
                         </li>
                         <li>
                             <a href="https://maps.app.goo.gl/w1kHihwY1TNsiRVM9" target="_blank">
-                                <img src="./multimedia/ico/place.png" class="redes" alt="Ubicación"> Ubicación: Ig. de
+                                <img src="../multimedia/ico/place.png" class="redes" alt="Ubicación"> Ubicación: Ig. de
                                 la Roza 590 (O), Ciudad de San Juan - Rivadavia
                             </a>
                         </li>
                     </ul>
                 </div>
-                <!--  redes -->
+                <!--   redes  -->
                 <div class="col-md-6">
                     <h4>Redes Sociales</h4>
                     <ul class="social-icons">
                         <li>
                             <a href="https://www.facebook.com/tupagina" target="_blank">
-                                <img src="./multimedia/ico/facebook.png" class="redes" alt="Facebook"> Facebook
+                                <img src="../multimedia/ico/facebook.png" class="redes" alt="Facebook"> Facebook
                             </a>
                         </li>
                         <li>
                             <a href="https://www.instagram.com/tuinstagram" target="_blank">
-                                <img src="./multimedia/ico/instagram.png" class="redes" alt="Instagram"> Instagram
+                                <img src="../multimedia/ico/instagram.png" class="redes" alt="Instagram"> Instagram
                             </a>
                         </li>
                     </ul>
-                    <!-- registro -->
+                    <!-- formulario  -->
                     <div class="row">
                         <div class="col-md-12">
                             <h4>Regístrate para recibir novedades</h4>
@@ -193,9 +177,9 @@
                                         aria-label="Tu dirección de correo electrónico"
                                         aria-describedby="button-addon2">
                                     <div class="input-group-append">
-                                        <!-- btn modal -->
+                                        <!-- btn  modal -->
                                         <button type="button" class="btn borde enviar" id="btnEnviar">
-                                            <img src="./multimedia/ico/avion.png" class="redes" alt="">
+                                            <img src="../multimedia/ico/avion.png" class="redes" alt="">
                                         </button>
                                         <!-- modal -->
                                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
@@ -240,8 +224,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  <!-- CDN de la api -->
 </body>
 
 </html>
