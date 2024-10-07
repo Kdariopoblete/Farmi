@@ -123,3 +123,11 @@ footer {
     padding: 20px;
     
 }
+.text-outline {
+    color: white; /* Color del texto */
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         4px  4px 0 black; /* Efecto de contorno */
+}
